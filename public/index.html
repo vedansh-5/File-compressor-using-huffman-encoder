@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huffman File Compression</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Huffman File Compression</h1>
+        
+        <!-- File Upload Form -->
+        <div class="upload-section">
+            <h2>Upload File for Compression</h2>
+            <input type="file" id="upload-file" accept=".txt" />
+            <button onclick="uploadFile()">Upload and Compress</button>
+            
+        <!-- Add a loading bar -->
+        <div id="loading-bar-container" style="display: none;">
+            <div id="loading-bar"></div>
+        </div>
+        </div>
+
+        <!-- Compressed File Section -->
+        <div class="compressed-section">
+            <h2>Compressed File</h2>
+            <button id="download-encoded" style="display:none" onclick="downloadFile('encoded.txt')">Download Encoded File</button>
+        </div>
+
+        <!-- Decompressed File Section -->
+        <div class="decompressed-section">
+            <h2>Decompressed File</h2>
+            <button id="download-decoded" style="display:none" onclick="downloadFile('decoded.txt')">Download Decoded File</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
